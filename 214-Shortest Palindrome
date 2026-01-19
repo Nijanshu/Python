@@ -1,0 +1,5 @@
+def shortestpalindrome(s):
+    l=len(s)
+    print(l,s[l//2])
+
+shortestpalindrome("abcde")
