@@ -35,9 +35,30 @@
 
 # swap(2,3)
 
-def pattern(n):
-    for i in range(n):
-        # print()
-        print(((i))*" "+(n-i)* f"{n-i} ")
+# def pattern(n):
+#     for i in range(n):
+#         # print()
+#         print(((i))*" "+(n-i)* f"{n-i} ")
 
-pattern(55)
+# pattern(55)
+
+
+def resolution_streak(days):
+    walk=10000
+    screen=120
+    pages=5
+
+    print(days[0])
+    for i,day in enumerate(days, start=1):
+        print(day[1])
+        if day[0]<walk:
+            return f"Resolution failed on day {i}:{i-1} day streak."
+        if day[1]>screen:
+            return f"Resolution failed on day {i}:{i-1} day streak."
+        if day[2]<pages:
+            return f"Resolution failed on day {i}:{i-1} day streak."
+        
+    return f"Resolution on track: {len(days)} day streak."
+
+print(resolution_streak([[10000, 120, 5], [10950, 121, 11]]))
+    
