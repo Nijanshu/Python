@@ -15,15 +15,17 @@ for i in nums:
     freq[i]=1
 
 print(freq)
-max=0
+maxx=0
 tmax=0
 
-for i in freq:
+for i in freq.values():
     
-    if freq[i]>max:
-        max=freq[i]
-        tmax+=max
-    elif freq[i]==max:
-        tmax+=freq[i]
+    maxx=max(maxx,i)
 
-print(tmax)
+
+ff=0
+for f in freq.values():
+    if f==maxx:
+        ff+=1
+
+print(ff*maxx)
