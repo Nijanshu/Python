@@ -36,6 +36,6 @@ m = 2
 
 result = find_m_sized_subsets(array, m)
 
-print(f"All subsets of size {m} from {array}:")
-for subset in result:
-    print(subset)
+print(f"All subsets of size {m} from {array}:",result)
+# for subset in result:
+#     print(subset)
