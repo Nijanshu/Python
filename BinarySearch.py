@@ -1,5 +1,5 @@
-arr=[1,2,3,4,5]
-target=6
+arr=[6, 12, 14, 18, 22, 39, 55, 182]
+target=20
 
 
 def binSearch(arr,target):
@@ -10,11 +10,11 @@ def binSearch(arr,target):
     if(l==1):
         print("Not found")
         return
-    elif arr[l//2]>target:
-        print(f"{arr[l//2]} more")
-        binSearch(arr[l//2:],target)
-
     elif arr[l//2]<target:
+        print(f"{arr[l//2]} more")
+        binSearch(arr[l//2+1:],target)
+
+    elif arr[l//2]>target:
         print(f"{arr[l//2]} less")
         binSearch(arr[:l//2],target)
 
